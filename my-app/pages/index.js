@@ -21,8 +21,9 @@ export default function Home() {
   // based on the Crypto Dev NFT's held by the user for which they havent claimed the tokens
   const [tokensToBeClaimed, setTokensToBeClaimed] = useState(zero);
   // balanceOfCryptoDevTokens keeps track of number of Crypto Dev tokens owned by an address
-  const [balanceOfCryptoDevTokens, setBalanceOfCryptoDevTokens] =
-    useState(zero);
+  const [balanceOfCryptoDevTokens, setBalanceOfCryptoDevTokens] = useState(
+    zero
+  );
   // amount of the tokens that the user wants to mint
   const [tokenAmount, setTokenAmount] = useState(zero);
   // tokensMinted is the total number of tokens that have been minted till now out of 10000(max total supply)
@@ -326,13 +327,12 @@ export default function Home() {
             <div>
               <div className={styles.description}>
                 {/* Format Ether helps us in converting a BigNumber to string */}
-                You have minted {utils.formatEther(balanceOfCryptoDevTokens)}{" "}
-                Crypto Dev Tokens
+                You have minted {utils.formatEther(balanceOfCryptoDevTokens)} Crypto
+                Dev Tokens
               </div>
               <div className={styles.description}>
                 {/* Format Ether helps us in converting a BigNumber to string */}
-                Overall {utils.formatEther(tokensMinted)}/10000 have been
-                minted!!!
+                Overall {utils.formatEther(tokensMinted)}/10000 have been minted!!!
               </div>
               {renderButton()}
             </div>
